@@ -69,7 +69,6 @@ func StoreLicense(ctx context.Context, clnt WrappedDockerClient, license *model.
 	}
 	_, err = clnt.ConfigCreate(context.Background(), spec)
 	if err != nil {
-
 		return fmt.Errorf("Failed to create license: %s", err)
 	}
 
