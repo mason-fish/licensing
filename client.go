@@ -248,9 +248,10 @@ func New(config *Config) (Client, error) {
 	}
 
 	return &client{
-		baseURI:    config.BaseURI,
-		hclient:    hclient,
-		publicKeys: publicKeys,
+		baseURI:       config.BaseURI,
+		hclient:       hclient,
+		publicKeys:    publicKeys,
+		verboseErrors: config.VerboseErrors,
 	}, nil
 }
 
