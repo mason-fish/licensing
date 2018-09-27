@@ -39,7 +39,6 @@ type WrappedDockerClient interface {
 
 // StoreLicense will store the license on the host filesystem and swarm (if swarm is active)
 func StoreLicense(ctx context.Context, clnt WrappedDockerClient, license *model.IssuedLicense, rootDir string) error {
-
 	licenseData, err := json.Marshal(*license)
 	if err != nil {
 		return err
@@ -123,7 +122,6 @@ func (c *client) LoadLocalLicense(ctx context.Context, clnt WrappedDockerClient)
 }
 
 func checkResponseToSubscription(checkResponse *model.CheckResponse, keyID string) *model.Subscription {
-
 	// TODO - this translation still needs some work
 	// Primary missing piece is how to distinguish from basic, vs std/advanced
 	var productID string
