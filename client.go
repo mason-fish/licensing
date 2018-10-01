@@ -5,13 +5,11 @@ import (
 	"context"
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
+	"math"
 	"net/http"
 	"net/url"
 	"strings"
-
-	"fmt"
-
-	"math"
 
 	"github.com/docker/libtrust"
 	"github.com/docker/licensing/lib/errors"
